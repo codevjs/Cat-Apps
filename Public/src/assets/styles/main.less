@@ -1,0 +1,279 @@
+@import "var";
+
+/*====================================
+=            GLOBAL                  =
+====================================*/
+html {
+  scroll-behavior: smooth;
+}
+
+.ant-modal-confirm .ant-modal-confirm-btns {
+  padding: 0 20px 20px;
+  margin-top: 0;
+}
+
+/*====================================
+=            PUBLIC LAYOUT           =
+====================================*/
+.public-layout {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  overflow-x: hidden;
+
+  /* PUBLIC HEADER ====================================*/
+  .public-header {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    padding: 10px 0;
+    @media @phone-down {  padding: 0;}
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: none;
+    transition: background-color 300ms linear;
+
+    .logo {
+      float: left;
+    }
+
+    .navigation {
+
+      ul {
+        text-align: center;
+        background: transparent;
+
+        li {
+          background: transparent;
+
+          a {
+            color: #FFFFFF;
+          }
+        }
+
+        li.mobile-visible {
+          display: none;
+        }
+
+      }
+
+
+    }
+
+    .button-menu {
+      float: right;
+      display: none;
+    }
+
+    .social-media {
+      float: right;
+    }
+
+    @media @desktop-down {
+      background: rgba(0, 0, 0, 0.7);;
+      box-shadow: 0 4px 30px 5px rgba(0, 0, 0, 0.1);
+
+      .list-menu, .social-media { display: none}
+      .button-menu { display: block}
+    }
+
+    @media @tablet-down {
+      background: rgba(0, 0, 0, 0.7);;
+      box-shadow: 0 4px 30px 5px rgba(0, 0, 0, 0.1);
+
+      .navigation, .social-media { display: none}
+      .button-menu { display: block}
+    }
+
+    @media @phone-down {
+      background: rgba(0, 0, 0, 0.7);;
+      box-shadow: 0 4px 30px 5px rgba(0, 0, 0, 0.1);
+
+      .navigation, .social-media { display: none}
+      .button-menu { display: block}
+    }
+
+    @media @small-phone-down {
+      background: rgba(0, 0, 0, 0.7);;
+      box-shadow: 0 4px 30px 5px rgba(0, 0, 0, 0.1);
+
+      .navigation, .social-media { display: none}
+      .button-menu { display: block}
+    }
+
+    .ant-menu-horizontal {
+      border-bottom: none;
+
+      .ant-menu-item, .ant-menu-horizontal > .ant-menu-submenu {
+        border-bottom: none;
+      }
+    }
+
+    .ant-menu-horizontal > .ant-menu-item, .ant-menu-horizontal > .ant-menu-submenu {
+      border-bottom: none;
+    }
+
+    .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-active, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-active, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-open, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-open, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-selected {
+      border-bottom: none;
+    }
+
+  }
+  .scrolled {
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 30px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  /* PUBLIC FOOTER ====================================*/
+  .public-footer {
+    background: #3A3A3A;
+    padding: 80px 0 20px;
+    text-align: left;
+    overflow: hidden;
+
+    p {
+      color: #ffffff;
+      font-weight: 300;
+      font-size: 0.75rem;
+      line-height: 30px;
+    }
+
+    .section-heading {
+
+      h2 {
+        font-weight: bold;
+        font-size: @size-text-h2;
+        line-height: 42px;
+        color: #ffffff;
+      }
+
+      .line {
+        width: 272px;
+        height: 6px;
+        border-radius: 10px;
+        background: #ffffff;
+        margin-bottom: 20px;
+      }
+
+      p {
+        color: #ffffff;
+        font-weight: 300;
+        font-size: 0.75rem;
+        line-height: 30px;
+      }
+    }
+
+    .social-media {
+      margin-top: 40px;
+      svg {
+        color : #ffffff;
+        font-size: 1.875rem;
+      }
+    }
+
+    .contact {
+
+      .phone {
+        color : #ffffff;
+        font-size: 0.938rem;
+        line-height: 30px;
+
+        svg {
+          font-size: 1.125rem;
+        }
+      }
+
+      .wa {
+        margin-top: 10px;
+        line-height: 30px;
+        color : #ffffff;
+        font-size: 0.938rem;
+
+        svg {
+          font-size: 1.125rem;
+        }
+      }
+
+      .email {
+        margin-top: 10px;
+        line-height: 30px;
+        color : #ffffff;
+        font-size: 0.938rem;
+
+        svg {
+          font-size: 1.125rem;
+        }
+      }
+
+      .address {
+        margin-top: 10px;
+        line-height: 30px;
+        color : #ffffff;
+        font-size: 0.938rem;
+
+        svg {
+          font-size: 1.125rem;
+        }
+      }
+
+      .footer-buttons {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  /* PUBLIC CONTAINER ====================================*/
+  .public-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  @media @wide-screen-down {.public-container {padding: 0 20px;}}
+  @media @ipad-pro-down {.public-container {padding: 0 20px;}}
+  @media @desktop-down {.public-container {padding: 0 20px;}}
+  @media @tablet-down {.public-container {padding: 0 20px;}}
+  @media @phone-down {.public-container {padding: 0 20px;}}
+  @media @small-phone-down {.public-container {padding: 0 20px;}}
+}
+
+/*====================================
+=            PUBLIC DRAWER           =
+====================================*/
+.public-drawer {
+  height: 100%;
+
+  .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+    background-color: transparent;
+  }
+
+  .ant-menu-item:active, .ant-menu-submenu-title:active {
+    background: none;
+  }
+
+  .social-media {
+    position: absolute;
+    padding-left: 15px;
+    font-size: 20px;
+    bottom: 0;
+  }
+}
+
+/*====================================
+=               MODAL                =
+====================================*/
+.ant-modal-root {
+
+  .ant-modal-wrap {
+
+    .detail-gallery {
+
+      .ant-modal-content {
+
+        .ant-modal-body {
+
+          padding: 0 !important;
+        }
+      }
+    }
+  }
+}

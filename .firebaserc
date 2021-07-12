@@ -1,0 +1,17 @@
+{
+  "projects": {
+    "default": "scotish-fold"
+  },
+  "targets": {
+    "scotish-fold": {
+      "hosting": {
+        "public": [
+          "scotish-fold"
+        ],
+        "admin": [
+          "dashboard-scotish-fold"
+        ]
+      }
+    }
+  }
+}
